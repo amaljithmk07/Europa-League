@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/update.css">
+</head>
+
+<body>
+    <div class="body">
+        <%- include('pages/header') %>
+            <div class="trophy">
+                <img src="images/logo 1.png" alt="">
+            </div>
+            <div class="create">
+                <div class="form">
+                    <form action="/api/europa/update/<%= data._id %>" method="post" enctype="multipart/form-data">
+
+                        <input type="text" placeholder="NAME OF THE CLUB" class="input1" name="name_of_the_club"
+                            value="<%= data.name_of_the_club %>"><br>
+
+                        <input type="text" placeholder="COACH NAME" class="input1" name="coach_name"
+                            value="<%= data.coach_name %>"><br>
+
+                        <input type="text" placeholder="NATIONALITY" class="input1" name="nationality"
+                            value="<%= data.nationality %>"><br>
+
+                        <input type="file" name="image" id="input1" value="<%=data.image %>">
+
+                        <input type="submit" value="GENERATE" id="input">
+
+
+
+                    </form>
+                </div>
+                <img src="/images/player1.png" alt="" id="create">
+
+            </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/viewone.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+
+
+<body>
+    <div class="body">
+
+        <%- include('pages/header') %>
+            <!-- <img src="/images/team1.jpg" alt=""> -->
+    </div>
+
+    <div class="contentbody">
+        <div class="content">
+            <div class="card">
+                <img src="/upload/<%= data.image %>" alt="Avatar" class="cardimg">
+                <div class="container">
+                    <b>
+                        <%= data.name_of_the_club %> <br>
+                            <%= data.coach_name %> <br>
+                                <%= data.nationality%> <br>
+                    </b>
+                </div>
+
+                <a href="/api/europa/edit/<%= data._id %>"> <input type="button" value="EDIT" class="edit"><br></a>
+                <input type="button" value="DELETE" class="delete">
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/teams.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
+
+<body>
+    <div class="body">
+
+        <%- include('pages/header') %>
+            <img src="/images/team1.jpg" alt="">
+    </div>
+
+
+
+
+    <div class="contentbody">
+        <div class="content">
+            <% details.forEach((team)=>{ %>
+                <div class="card">
+                    <img src="/upload/<%= team.image %>" alt="Avatar" class="cardimg">
+                    <div class="container">
+                        <b>
+                            <%= team.name_of_the_club %> <br>
+                                <%= team.coach_name %> <br>
+                                    <%= team.nationality%> <br>
+                        </b>
+                    </div>
+
+                    <a href="/api/europa/view/<%= team._id %>"> <input type="button" value="VIEW" class="edit"></a><br>
+                    <a href="/api/europa/delete/<%= team._id %>"> <input type="button" value="DELETE" class="delete"></a>
+
+                </div>
+                <% }) %>
+
+        </div>
+    </div>
+</body>
+
+</html>
